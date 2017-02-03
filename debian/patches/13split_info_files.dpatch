@@ -13,7 +13,7 @@ diff -Naur screen-4.0.3.orig/doc/Makefile.in screen-4.0.3/doc/Makefile.in
  info screen.info: screen.texinfo
  	@rm -f screen.info*
 -	$(MAKEINFO) $(srcdir)/screen.texinfo -o screen.info
-+	$(MAKEINFO) --split 50000 $(srcdir)/screen.texinfo -o screen.info
++	$(MAKEINFO) --split-size=50000 $(srcdir)/screen.texinfo -o screen.info
  
  install: installdirs
  	$(INSTALL_DATA) $(srcdir)/screen.1 $(DESTDIR)$(mandir)/man1/screen.1
