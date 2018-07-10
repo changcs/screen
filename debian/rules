@@ -86,7 +86,7 @@ binary-arch: install
 	dh_installman || true
 	dh_installinfo
 	dh_installchangelogs -k patchlevel.h
-	dh_installinit --no-start --init-script='screen-cleanup' --update-rcd-params='start 70 S .'
+	dh_installinit --no-start --init-script='screen-cleanup'
 	dh_strip
 	dh_compress
 	dh_fixperms -X/usr/bin/screen
